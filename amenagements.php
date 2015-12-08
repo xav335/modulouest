@@ -81,6 +81,7 @@
 							if ( 1 == 1) {
 								unset( $recherche );
 								$recherche[ "id_categorie" ] = $_sous_categorie[ "id" ];
+								$recherche[ "online" ] = '1';
 								$liste_produit = $produit->getListe( $recherche, $debug );
 								
 								if ( !empty( $liste_produit ) ) {
@@ -90,7 +91,7 @@
 										$image_defaut = $produit_image->getImageDefaut( $id_produit, $debug );
 										
 										echo "	<div class='large-4 medium-4 small-12 columns'>\n";
-										echo "		<a href='/amenagement-detail.php?id=" . $id_produit . "' data-fancybox-group='amenagementbois' title=''><img src='/photos/produit/vignette" . $image_defaut[ "fichier" ] . "' title='" . $nom . "' /></a>\n";
+										echo "		<a href='/amenagement-detail.php?id=" . $id_produit . "' data-fancybox-group='amenagementbois' title=''><img src='/photos/produit/accueil" . $image_defaut[ "fichier" ] . "' title='" . $nom . "' /></a>\n";
 										echo "	</div>\n";
 									}
 									
