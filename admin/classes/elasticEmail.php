@@ -4,10 +4,8 @@
 	{
 		$res = "";
 	
-		//$data = "username=".urlencode("691f06a3-f0d1-41b6-87c1-b8a769c5c1f1");
-		//$data .= "&api_key=".urlencode("691f06a3-f0d1-41b6-87c1-b8a769c5c1f1");
-		$data = "username=".urlencode("76080032-8c06-432f-bcb9-0bcd64494435");
-                $data .= "&api_key=".urlencode("76080032-8c06-432f-bcb9-0bcd64494435");
+		$data = "username=".urlencode("3efef805-12cb-4ec5-938f-44eb1b241eac");
+        $data .= "&api_key=".urlencode("3efef805-12cb-4ec5-938f-44eb1b241eac");
 		$data .= "&from=".urlencode($from);
 		$data .= "&from_name=".urlencode($fromName);
 		$data .= "&to=".urlencode($to);
