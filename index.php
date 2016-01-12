@@ -65,13 +65,14 @@
 			$contenu_produit .= "	<div class='large-12 columns'>\n";
 			$contenu_produit .= "		<h1>Nos aménagements</h1>\n";
 			$contenu_produit .= "	</div>\n";
+			$contenu_produit .= "	<div class='swiper-wrapper'>\n";
 			
 			foreach( $liste_produit as $_produit ) {
 				$id_produit = $_produit[ "id" ];
 				$nom = ( $_produit[ "nom" ] );
 				$image_defaut = $produit_image->getImageDefaut( $id_produit, $debug );
 				
-				$contenu_produit .= "	<div class='large-4 medium-4 small-12 columns'>\n";
+				$contenu_produit .= "	<div class='large-4 medium-4 small-12 columns swiper-slide'>\n";
 				$contenu_produit .= "		<a href='/amenagement-detail.php?id=" . $id_produit . "'>\n";
 				$contenu_produit .= "			<span>" . $nom . "</span>\n";
 				$contenu_produit .= "			<img src='/photos/produit/accueil" . $image_defaut[ "fichier" ] . "' alt='" . $nom . "' />\n";
@@ -79,6 +80,7 @@
 				$contenu_produit .= "	</div>\n";
 			}
 			
+			$contenu_produit .= "	</div>\n";
 			$contenu_produit .= "	<div style='clear:both;'></div>\n";
 			$contenu_produit .= "</div>\n";
 		}
@@ -125,26 +127,6 @@
 	echo $contenu_produit;
 	?>
 	
-	<!--
-	<div class="row amenagements">
-		<div class="large-12 columns">
-			<h1>Nos aménagements</h1>
-		</div>
-		<div class="large-4 medium-4 small-12 columns">
-			<span>aménagement</span>
-			<img src="img/amenagement-01.jpg" alt="" />
-		</div>
-		<div class="large-4 medium-4 small-12 columns">
-			<span>aménagement</span>
-			<img src="img/amenagement-01.jpg" alt="" />
-		</div>
-		<div class="large-4 medium-4 small-12 columns">
-			<span>aménagement</span>
-			<img src="img/amenagement-01.jpg" alt="" />
-		</div>
-	</div>
-	-->
-	
 	<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/footer.php" ); ?>
 	<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/scripts.php" ); ?>
 	
@@ -153,33 +135,6 @@
 			
 			$('.menu li:first-child').addClass('active');
 			
-			// ---- Gestion des différents sliders ------------------------- //
-			if ( 1 == 12 ) {
-				//var swiper = new Swiper('.swiper-container');
-			    var swiper = new Swiper('.swiper-container', {
-			        pagination: '.swiper-pagination',
-			        nextButton: '.swiper-button-next',
-			        prevButton: '.swiper-button-prev',
-			        paginationClickable: true,
-			        centeredSlides: true,
-			        autoplay: 2500,
-			        spaceBetween: 30,
-		    		effect: 'fade',
-			        loop: true
-			    });
-			    
-			    /*var swiper = new Swiper('.swiper-container-actualite', {
-			        paginationClickable: true,
-			        centeredSlides: true,
-			        autoplay: 2500,
-			        spaceBetween: 30,
-		    		effect: 'fade',
-			        loop: true
-			    });*/
-			}
-			// ------------------------------------------------------------- //
-			
-		    
 			// ---- Ouverture de l'iframe pour jouer la vidéo Youtube ------ //
 			$( ".play" )
 				.attr( 'rel', 'media-gallery' )

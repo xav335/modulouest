@@ -129,8 +129,8 @@ class Produit extends StorageManager {
 	
 		try {
 			
-			// ---- Chargement de la catégorie ----- //
-			$data = $this->load( $id, $debug );
+			// ---- Chargement du produit ---------- //
+			//$data = $this->load( $id, $debug );
 			//print_pre( $data );
 			
 			// ---- Suppression de la catégorie ---- //
