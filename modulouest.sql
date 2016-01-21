@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.5.38, for debian-linux-gnu (x86_64)
+-- MySQL dump 10.13  Distrib 5.5.44, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: modulouest
 -- ------------------------------------------------------
--- Server version	5.5.38-0+wheezy1
+-- Server version	5.5.44-0+deb8u1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -37,7 +37,7 @@ CREATE TABLE `admin` (
 
 LOCK TABLES `admin` WRITE;
 /*!40000 ALTER TABLE `admin` DISABLE KEYS */;
-INSERT INTO `admin` VALUES (1,'immo','immo33','administrateur'),(2,'admin','admin335','ico');
+INSERT INTO `admin` VALUES (1,'modul','modul33','administrateur'),(2,'admin','admin335','ico');
 /*!40000 ALTER TABLE `admin` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -55,7 +55,7 @@ CREATE TABLE `catproduct` (
   `image` varchar(50) NOT NULL,
   `ordre_affichage` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=99 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -64,7 +64,7 @@ CREATE TABLE `catproduct` (
 
 LOCK TABLES `catproduct` WRITE;
 /*!40000 ALTER TABLE `catproduct` DISABLE KEYS */;
-INSERT INTO `catproduct` VALUES (41,0,'Aménagements bois','/_MG_5081-41.jpg',2),(43,0,'Aménagements modulaires','/_MG_5255-43.jpg',1),(50,43,'Bois de chène...','',1),(51,43,'Bois de l\'érable du coin','',2),(54,0,'Autres','',3),(55,41,'Grand format','',1);
+INSERT INTO `catproduct` VALUES (41,41,'Protection bois  ','/_MG_5081-41.jpg',1),(43,43,' ','/_MG_5255-43.jpg',2),(54,0,'Aménagement modulaire  ','',2),(57,56,'amenagements','',1),(58,54,'System Edstrom  ','',4),(60,60,'Protection bois  ','',1),(65,65,'Protection bois  ','',1),(66,66,'Protection aluminium  ','',2),(68,81,'Balisage ','',2),(69,65,'Protection bois ','',1),(73,71,'Protection en Contre Plaqué   ','',1),(75,75,'Protection aluminium  ','',6),(77,75,'Habillage bois  ','',1),(79,79,'Protection bois ','',5),(80,0,'habillage du véhicule ','',1),(81,81,'Gyrophare et rampe  ','',5),(82,82,'Marchepied ','',4),(83,83,'Plastification et résine étanche ','',5),(84,84,'Transformation VP/VU','',8),(85,0,'Hayon élévateur','',9),(86,0,'Aménagement TPMR','',6),(87,0,'Aménagement spécifique','',7),(94,94,'Produits','',13),(96,80,'Habillage et protection','',1),(97,97,'Balisage ','',3),(98,87,'Protection aluminium','',1);
 /*!40000 ALTER TABLE `catproduct` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -148,7 +148,7 @@ CREATE TABLE `goldbook` (
 
 LOCK TABLES `goldbook` WRITE;
 /*!40000 ALTER TABLE `goldbook` DISABLE KEYS */;
-INSERT INTO `goldbook` VALUES (1,'2015-09-06 00:00:00','Franck Langleron','franck_langleron@hotmail.com','Très professionnel ! je recommande!!',0),(2,'2015-09-07 00:00:00','Xavier Gonzalez','xavier@gonzalez.pm','Prestation nickel, très pro, très satisfait',1),(3,'2015-11-07 00:00:00','L\'angléron','franck_langleron@hotmail.com','mon message \r\nc\'est ça!!!',1),(4,'2015-11-22 00:00:00','L\'angléron','franck_langleron@hotmail.com','Blablabla...',1);
+INSERT INTO `goldbook` VALUES (1,'2015-09-06 00:00:00','Franck Langleron','franck_langleron@hotmail.com','Très professionnel ! je recommande!!',1),(2,'2015-09-07 00:00:00','Xavier Gonzalez','xavier@gonzalez.pm','Prestation nickel, très pro, très satisfait',1);
 /*!40000 ALTER TABLE `goldbook` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -193,7 +193,7 @@ CREATE TABLE `news` (
   `image1` varchar(250) DEFAULT NULL,
   `online` tinyint(4) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id_news`)
-) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -247,7 +247,7 @@ CREATE TABLE `newsletter_detail` (
   `link` varchar(250) DEFAULT NULL,
   `texte` text,
   PRIMARY KEY (`id`,`id_newsletter`)
-) ENGINE=InnoDB AUTO_INCREMENT=327 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=329 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -256,7 +256,7 @@ CREATE TABLE `newsletter_detail` (
 
 LOCK TABLES `newsletter_detail` WRITE;
 /*!40000 ALTER TABLE `newsletter_detail` DISABLE KEYS */;
-INSERT INTO `newsletter_detail` VALUES (326,12,'','/IMG_5187-12.jpg','http://dev.votreimmopro.com','');
+INSERT INTO `newsletter_detail` VALUES (328,12,'Nouve équipement','/Avril_13_024-12.jpg','http://modulouest.iconeo.fr','');
 /*!40000 ALTER TABLE `newsletter_detail` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -276,7 +276,7 @@ CREATE TABLE `product` (
   `accueil` enum('0','1') NOT NULL DEFAULT '0',
   `online` enum('0','1') NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -285,7 +285,7 @@ CREATE TABLE `product` (
 
 LOCK TABLES `product` WRITE;
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
-INSERT INTO `product` VALUES (1,50,'En bois','Retrouvez le goût authentique des cakes élaborés dans la plus pure tradition.\r\nComposition : œuf, sucre, beurre, poudre d’amandes, farine, fruits, sorbitol. Traces possible de fruits à coques.','/test-1.pdf','1','1'),(2,50,'Diamants','Ce biscuit sablé tient son nom de la brillance que lui donne sa croute de sucre cristal sur le dessus.\r\nComposition : Farine, Beurre, Sucre, jaune d’œufs, Sel','','1','1'),(3,0,'Modules en T','blabla...','','1','1'),(4,55,'Pièces montées','parties modulaires','','1','1');
+INSERT INTO `product` VALUES (1,96,'Aménagement bois ','L\'aménagement ou l\'équipement d\'un véhicule utilitaire est souvent considéré comme une charge supplémentaire, alors qu\'au contraire un véhicule correctement aménagé est un gain de productif direct.   \r\nGain de temps: Plusieurs études menées faisant apparaitre qu\'un véhicule correctement aménagé permettait de gagner en moyenne une heure par jour. L\'investissement de départ est alors rapidement amorti. \r\nImage de votre entreprise : Un véhicule mal améngé donne une image négative de votre entreprise , comment faire confiance à un professionnel dont le véhicule est un amoncellement d\'outils, de matériaux .... un client se demande rapidement dans quel état il retrouvera son chantier. \r\nSécurité : Moins de risques d\'avoir des objets mobiles à l\'intérieur de votre véhicule , moins de riques de tranferts de charges inopinées risquant de déstabiliser votre véhicule.  \r\n\r\nTous nos aménagements bois sont réalisés sur-mesure en fonction de vos besoins et votre souhait. \r\nRéalisation en contreplaqué brut ou filmé, selon votre choix ?  \r\n \r\n\r\n   ','/test-1.pdf','1','1'),(3,0,'Aménagement spécifique','Depuis plus de 20 ans. MODUL-OUEST répond à la demande de ses clients, nous sommes en mesure d\'apporter une solution à vos contraintes : \r\nAluminium, Résine, Kit Cover ... du plus simple au plus complexe.    ','','1','1'),(6,0,'Signalisation lumineuse et balisage  ','Nous équipons tous types de véhicules de POLICE , GENDARMERIE  et BTP . \r\nBalisage classe A et B , Gyrophare à leds , Triangle a relevage manuel ou électrique .....\r\nNous commercialisons les produits: SIRAC. MERCURA. AXIMUM. T2S . SARR ....    ','','0','0'),(7,0,'Habillage du véhicule   ','L\'habillage d\'un véhicule , consiste à protéger l\'intérieur de chargement de votre véhicule utilitaire des chocs liés à son utilisation.\r\nNos protections sont réalisées en contre plaqué de qualité oukoumé en 5 ou 8 mm d\'épaisseur suivant le type de véhicule .\r\nLes planchers sont réalisés en contre plaqué brut de 15mm ou antidérapant 12 mm suivant la demande et l\'utilisation. \r\nFinition: Joints silicone et barre de seuil aluminium.     ','','0','0'),(8,0,'Signalisation lumineuse ','Partenaire de la marque SIRAC , nous équipons les véhicules de POLICE, GENDARMERIE et POMPIERS ','','0','0'),(9,58,' Aménagement modulaire ','System Edstrom fondée en 1958 , est l\'une des plus ancienne société en EUROPE fabriquant et commercialisant des aménagements pour les véhicules utilitaires. Plus de 50 ans d\'expérience dans le développement de nos produits , plus de 50 ans d\'écoute attentive des souhaits de nos clients pour trouver des solutions pour les utilisateurs. \r\nNotre priorité la sécurité, nos aménagements ont obtenus la certification française INRS NS286     ','','1','1'),(10,98,'Protection aluminium','Une protection aluminium vous permet un lavage ou une désinfection de votre véhicule  ','','1','1'),(11,96,'Habillage bois ','Nos habillage sont réalisés en contreplaqué de qualité supérieur, nous protégeons les parois , les portes et le plancher, ce dernier peut être en contreplaqué antidérapant .\r\nNous pouvons vous proposer du CP filmé ou du Poly pro.    ','','0','0'),(12,58,'Aménagement modulaire System Edstrom ','Véhicule atelier ','','1','1');
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -302,7 +302,7 @@ CREATE TABLE `product_image` (
   `fichier` varchar(100) NOT NULL,
   `defaut` enum('oui','non') NOT NULL DEFAULT 'non',
   PRIMARY KEY (`num_image`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -311,7 +311,7 @@ CREATE TABLE `product_image` (
 
 LOCK TABLES `product_image` WRITE;
 /*!40000 ALTER TABLE `product_image` DISABLE KEYS */;
-INSERT INTO `product_image` VALUES (16,2,'/IMG_6027-2.jpg','non'),(20,4,'/IMG_6130-4.jpg','non'),(21,1,'/20150404_175513-1.jpg','oui'),(22,1,'/IMG_6130-1.jpg','non'),(23,2,'/IMG_6341-2.jpg','oui'),(24,3,'/20150409_131600-3.jpg','oui'),(25,4,'/IMG_6686-4.jpg','oui');
+INSERT INTO `product_image` VALUES (20,4,'/IMG_6130-4.jpg','non'),(25,4,'/IMG_6686-4.jpg','oui'),(30,9,'/Fevrier_14_001-9.jpg','oui'),(31,9,'/Fevrier_14_004-9.jpg','non'),(32,9,'/Samsung_1115_004-9.jpg','non'),(33,10,'/003-10.jpg','oui'),(34,11,'/0115_003-11.jpg','oui'),(35,6,'/Oct_15_Tel_037-6.jpg','oui'),(36,3,'/Oct_15_042-3.jpg','oui'),(37,12,'/Samsung_1115_004-12.jpg','oui');
 /*!40000 ALTER TABLE `product_image` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -324,4 +324,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-12-08 11:27:49
+-- Dump completed on 2016-01-21 12:25:48
