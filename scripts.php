@@ -72,12 +72,22 @@
 	        speed: 1000,
 	        loop:true
 	    });
-		var swiperamenagements = new Swiper('.amenagements', {
-	        slidesPerView: 3,
-	        autoplay: 3000,
-	        speed: 1000,
-	        loop:true
-	    });
+	    
+	    <?
+	    // ---- Suffisamment de block pour lancer le slider ----- //
+	    if ( count( $liste_produit ) >= 3 ) {
+	    	?>
+			var swiperamenagements = new Swiper('.amenagements', {
+		        slidesPerView: 3,
+		        autoplay: 3000,
+		        speed: 1000,
+		        loop:true
+		    });
+			<?
+		}
+	    // ------------------------------------------------------ //
+	    ?>
+	    
 		var swiperamenagements = new Swiper('.swiper-vignettes', {
 	        slidesPerView: 3,
 	        autoplay: 0

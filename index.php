@@ -57,6 +57,7 @@
 		$recherche[ "online" ] = '1';
 		$recherche[ "accueil" ] = '1';
 		$liste_produit = $produit->getListe( $recherche, $debug );
+		//print_pre( $liste_produit );
 		
 		$contenu_produit = '';
 		
@@ -83,6 +84,7 @@
 			$contenu_produit .= "	</div>\n";
 			$contenu_produit .= "	<div style='clear:both;'></div>\n";
 			$contenu_produit .= "</div>\n";
+			//echo $contenu_produit . "<br>";
 		}
 	}
 	// --------------------------------------- //
