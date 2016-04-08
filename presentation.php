@@ -59,12 +59,13 @@
 		</div>
 		<div class="large-12 medium-12 small-12 columns center" style="margin-top: 30px;">
 		<h3>Partenaires des plus grandes marques:</h3>
-		  	<img alt="" src="img/durisotti.jpg" width="130">
+		<img alt="" src="img/sirac.png" width="80">
+		  	
 			<img alt="" src="img/mst.png" width="130">
-			<img alt="" src="img/sirac.png" width="130">
-			<img alt="" src="img/systemedstrom.png" width="130">
-			<img alt="" src="img/rsm.png" width="130">
-			<img alt="" src="img/deholandia.png" width="130">
+			<img alt="" src="img/deholandia.png" width="190">
+			<img alt="" src="img/systemedstrom.png" width="120">
+			<img alt="" src="img/durisotti.jpg" width="220">
+			<img alt="" src="img/rsm.png" width="120">
 		 
 		 </div>
 		  

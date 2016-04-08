@@ -64,7 +64,7 @@
 			<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/rappel.php" ); ?>
 	
 			<div class="large-12 columns">
-				<h1>Titre aménagement</h1>
+				<h1><?php echo $nom?></h1>
 			</div>
 			
 			<div class="row">
