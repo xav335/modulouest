@@ -42,7 +42,7 @@
 		
 		// ---- Envoi du mail à l'admin -------------- //
 		if ( 1 == 1 ) {
-			$entete = "From:" . MAILNAMECUSTOMER . " <" . MAILCUSTOMER . ">\n";
+			$entete = "From:" . $_POST[ "nom" ] . " <" .  $_POST[ "email" ] . ">\n";
 			$entete .= "MIME-version: 1.0\n";
 			$entete .= "Content-type: text/html; charset= iso-8859-1\n";
 			$entete .= "Bcc:" . MAIL_BCC . "\n";

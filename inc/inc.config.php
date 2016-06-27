@@ -43,8 +43,8 @@
 	define( "MAILCUSTOMER", 	"NePasRepondre@modul-ouest.com" );
 	define( "MAILNAMECUSTOMER", "Modul Ouest" );
 	define( "URLSITEDEFAULT", 	"http://www.modul-ouest.com/" );
-	define( "FACEBOOK_LINK", 	"https://www.facebook.com/#" );
-	define( "DAILYMOTION_LINK", "#" );
+	define( "FACEBOOK_LINK", 	"https://www.facebook.com/modul.ouest" );
+	define( "DAILYMOTION_LINK", "http://www.dailymotion.com/video/x43ijxj" );
 	
 	// ---- Mail d'envoi
 	define( "MAIL_TEST", 	"" ); // Si rempli alors cette valeur ser utilis�e pour les diff�rents envois de mails

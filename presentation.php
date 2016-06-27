@@ -23,7 +23,7 @@
 			<h3>Une équipe dynamique, professionnelle, est à votre écoute depuis plus de 20 ans.</h3>
 			<p>
                 Nous vous accompagnons pour faire de votre véhicule utilitaire votre outil de travail.<br><br>
-                Fort de son expérience, présent en gironde et le grand ouest,<br>
+                Fort de son expérience, présent en gironde et dans le grand ouest,<br>
                 MODUL OUEST ne cesse de se renouveler et trouve la meilleure solution pour l’aménagement, l’équipement et la transformation de votre véhicule.<br>
                 <br>
                 <strong>3 fondamentaux sont notre leitmotiv</strong><br>
@@ -59,13 +59,15 @@
 		</div>
 		<div class="large-12 medium-12 small-12 columns center" style="margin-top: 30px;">
 		<h3>Partenaires des plus grandes marques:</h3>
-		<img alt="" src="img/sirac.png" width="80">
+		
 		  	
+			
+			<a href="http://www.systemedstrom.com/fr/netshop?ref=20558" target="_blank"><img alt="" src="img/systemedstrom.png" width="120"></a>
+			<img alt="" src="img/durisotti.jpg" width="220">
+			<img alt="" src="img/sirac.png" width="80">
+			<img alt="" src="img/rsm.png" width="120">
 			<img alt="" src="img/mst.png" width="130">
 			<img alt="" src="img/deholandia.png" width="190">
-			<img alt="" src="img/systemedstrom.png" width="120">
-			<img alt="" src="img/durisotti.jpg" width="220">
-			<img alt="" src="img/rsm.png" width="120">
 		 
 		 </div>
 		  
