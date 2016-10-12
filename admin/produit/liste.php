@@ -1,15 +1,15 @@
 <? include_once ( $_SERVER[ "DOCUMENT_ROOT" ] . "/admin/inc-auth-granted.php" );?>
 <? include_once ( $_SERVER[ "DOCUMENT_ROOT" ] . "/admin/classes/utils.php" );?>
 <? 
-	require( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/inc.config.php" );
+	require$_SERVER[ "DOCUMENT_ROOT" ] . "/inc/inc.config.php";
 	require $_SERVER[ "DOCUMENT_ROOT" ] . "/admin/classes/Categorie.php";
 	require $_SERVER[ "DOCUMENT_ROOT" ] . "/admin/classes/Produit.php";
 	require $_SERVER[ "DOCUMENT_ROOT" ] . "/admin/classes/Produit_image.php";
 	
-	$debug = false;
-	$categorie = new Categorie();
-	$produit = new Produit();
-	$produit_image = new Produit_image();
+	$debug = 			false;
+	$categorie = 		new Categorie();
+	$produit = 			new Produit();
+	$produit_image = 	new Produit_image();
 	
 	$id_categorie = ( $_POST[ "id_categorie" ] != '' ) ? $_POST[ "id_categorie" ] : $_GET[ "id_categorie" ];
 	
@@ -60,7 +60,8 @@
 						<?
 						if ( !empty( $liste_categorie ) ) {
 							foreach( $liste_categorie as $_categorie ) {
-								echo "<option value='' disabled >" . $_categorie[ "nom" ] . "</option>\n";
+								$selected = ( $id_categorie == $_categorie[ "id" ] ) ? "selected" : "";
+								echo "<option value='" . $_categorie[ "id" ] . "' " . $selected . " >" . $_categorie[ "nom" ] . "</option>\n";
 								
 								// ---- Liste des sous catégories disponibles ----- //
 								if ( 1 == 1 ) {
