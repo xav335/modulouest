@@ -80,14 +80,14 @@
 							// ---- Recherche & affichage des produits disponibles pour cette sous catégorie ---- //
 							if ( 1 == 1) {
 								unset( $recherche );
-								$recherche[ "id_categorie" ] = $_sous_categorie[ "id" ];
-								$recherche[ "online" ] = '1';
+								$recherche[ "id_categorie" ] = 	$_sous_categorie[ "id" ];
+								$recherche[ "online" ] = 		'1';
 								$liste_produit = $produit->getListe( $recherche, $debug );
 								
 								if ( !empty( $liste_produit ) ) {
 									foreach ( $liste_produit as $_produit ) {
-										$id_produit = $_produit[ "id" ];
-										$nom = $_produit[ "nom" ];
+										$id_produit = 	$_produit[ "id" ];
+										$nom = 			$_produit[ "nom" ];
 										$image_defaut = $produit_image->getImageDefaut( $id_produit, $debug );
 										
 										echo "	<div class='large-4 medium-4 small-12 columns'>\n";
@@ -103,7 +103,33 @@
 						}
 					}
 					
+					// ---- Recherche & affichage des produits disponibles pour cette catégorie
+					if ( 1 == 1) {
+						unset( $recherche );
+						$recherche[ "id_categorie" ] = 	$_categorie[ "id" ];
+						$recherche[ "online" ] = 		'1';
+						$liste_produit = $produit->getListe( $recherche, $debug );
+						
+						if ( !empty( $liste_produit ) ) {
+							echo "<h3>" . $_categorie[ "nom" ] . "</h3><br>\n";
+							
+							foreach ( $liste_produit as $_produit ) {
+								$id_produit = 	$_produit[ "id" ];
+								$nom = 			$_produit[ "nom" ];
+								$image_defaut = $produit_image->getImageDefaut( $id_produit, $debug );
+								
+								echo "	<div class='large-4 medium-4 small-12 columns'>\n";
+								echo "		<a href='/amenagement-detail.php?id=" . $id_produit . "' data-fancybox-group='amenagementbois' title=''><img src='/photos/produit/accueil" . $image_defaut[ "fichier" ] . "' title='" . $nom . "' /></a>\n";
+								echo "	</div>\n";
+							}
+							
+							echo "	<div style='clear:both;'></div>\n";
+						}
+					}
+					// -------------------------------------------- //
+					
 					echo "</div>\n";
+					
 					$i++;
 				}
 				
