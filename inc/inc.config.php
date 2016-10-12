@@ -5,11 +5,11 @@
 	switch( $_SERVER[ "DOCUMENT_ROOT" ] ) {
 		
 		// ---- Serveur local Franck -------- //
-		case "/var/www/modul-ouest" :
+		case "/var/www/modulouest" :
 			$localhost = "localhost";
 			$dbname = "modulouest";
-			$user = "modulouest";
-			$mdp = "modulouest";
+			$user = "global";
+			$mdp = "global";
 			break;
 		
 		// ---- Serveur PRE-PROD ------------ //

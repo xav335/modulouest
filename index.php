@@ -1,6 +1,6 @@
 <?
 	include_once ( $_SERVER[ "DOCUMENT_ROOT" ] . "/admin/classes/utils.php" );
-	require( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/inc.config.php" );
+	require $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/inc.config.php";
 	require $_SERVER[ "DOCUMENT_ROOT" ] . "/admin/classes/News.php";
 	require $_SERVER[ "DOCUMENT_ROOT" ] . "/admin/classes/Produit.php";
 	require $_SERVER[ "DOCUMENT_ROOT" ] . "/admin/classes/Produit_image.php";

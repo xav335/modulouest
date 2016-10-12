@@ -6,18 +6,20 @@
 	require '../classes/Produit.php';
 	require '../classes/Produit_image.php';
 	
-	$debug = false;
-	$categorie = new Categorie();
-	$produit = new Produit();
-	$produit_image = new Produit_image();
+	$debug = 			false;
+	$categorie = 		new Categorie();
+	$produit = 			new Produit();
+	$produit_image = 	new Produit_image();
+	
+	//print_pre( $_GET );
 	
 	// ---- Modification ---------------------------- //
 	if ( !empty( $_GET ) ) {
 		$action = 'modif';
-		$result = $produit->load( $_GET[ "id" ] );
+		$result = $produit->load( $_GET[ "id" ], $debug );
 
 		if ( !empty( $result ) ) {
-			$titre_page = 	'Catégorie "'. $result[ 0 ][ "nom" ] . '"';
+			$titre_page = 	'Produit "'. $result[ 0 ][ "nom" ] . '"';
 			$id =			$_GET[ "id" ];
 			$id_categorie = $result[ 0 ][ "id_categorie" ];
 			$nom = 			$result[ 0 ][ "nom" ];
@@ -91,11 +93,13 @@
 						<div class="form-group" >
 							<label class="col-sm-2" for="titre">Catégorie :</label>
 							<select name="id_categorie" required>
-								<option value="0" selected>-- Aucune --</option>
+								<option value="" selected >-- Aucune --</option>
 								<?
 								if ( !empty( $liste_categorie ) ) {
 									foreach( $liste_categorie as $_categorie ) {
-										echo "<option value='' disabled >" . $_categorie[ "nom" ] . "</option>\n";
+										$selected = ( $id_categorie == $_categorie[ "id" ] ) ? "selected" : "";
+										//echo "<option value='' disabled >" . $_categorie[ "nom" ] . "</option>\n";
+										echo "<option value='" . $_categorie[ "id" ] . "' " . $selected . ">" . $_categorie[ "nom" ] . "</option>\n";
 										
 										// ---- Liste des sous catégories disponibles ----- //
 										if ( 1 == 1 ) {
