@@ -1,6 +1,8 @@
 	<div class="row fullwidth footer">
 		<div class="large-8 medium-8 small-12 columns">
-			<div id="map-canvas"></div>
+			<div style="cursor:pointer" class="mapClick" onclick="javascript:document.location.href='https://goo.gl/eTWs92';">
+			     
+			</div>
 		</div>
 		<div class="large-4 medium-4 small-12 columns">
 			<h3>MODUL-OUEST</h3>
