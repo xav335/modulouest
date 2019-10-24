@@ -18,7 +18,7 @@
 			            </a>
 		            </div>
 		            <div class="large-2 medium-2 small-2 columns">
-		               <a href="http://www.systemedstrom.com/fr/netshop?ref=20558" target="_blank"><img alt="" src="img/boutique.png"></a>
+		               <a href="http://www.systemedstrom.com/" target="_blank"><img alt="" src="img/boutique.png"></a>
 		            </div>
 	            </div>
             </div>
