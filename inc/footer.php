@@ -16,7 +16,9 @@
 				Fax 05 56 74 28 28
 			</p>
 			<p>Email : commercial@modul-ouest.com</p>
-			<p><a href="<?=FACEBOOK_LINK?>" class="facebook" title="Facebook" target="_blank"></a><a href="<?=DAILYMOTION_LINK?>" class="dailymotion" title="Dailymotion" target="_blank"></a></p>
+			<p><a href="mentions.php" >Mentions légales</a></p>
+			<p><a href="<?=FACEBOOK_LINK?>" class="facebook" title="Facebook" target="_blank"></a></p>
+			
 			<form id="form_news" action="#" method="post">
 				<input type="hidden" name="as" value="" />
 				<p>
@@ -24,5 +26,6 @@
 					<input type="email" name="email_news" id="email_news" value="" placeholder="Saisissez votre e-mail" /><button>OK</button>
 				</p>
 			</form>
+			
 		</div>
 	</div>

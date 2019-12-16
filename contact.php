@@ -123,7 +123,7 @@
 					Tél. 05 56 74 25 25<br/>
 					Fax 05 56 74 28 28
 				</p>
-				<p>Email : commercial(at)modul-ouest.com</p>
+				<p>Email : commercial@modul-ouest.com</p>
 			</div>
 			<div class="large-8 medium-6 small-12 columns">
 				<form id="formulaire" class="row contact" method="post" action="contact.php">

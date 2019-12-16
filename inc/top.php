@@ -1,6 +1,6 @@
 	<div class="row fullwidth center top-of-page">
 		<div class="large-12 columns top">
-			<img src="img/logo-modul-ouest.svg" alt="Modul-Ouest" />
+			<img src="img/nvlogo.png" alt="Modul-Ouest" />
 		</div>
 	</div>
 	<div class="row fullwidth menu">
