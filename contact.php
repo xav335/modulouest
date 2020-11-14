@@ -1,4 +1,4 @@
-<? 
+<?php 
 	require( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/inc.config.php" );
 	require 'admin/classes/Contact.php';
 	require 'admin/classes/utils.php';
@@ -83,15 +83,15 @@
 <html class="no-js" lang="fr">
 	<head>
 		<title>Contactez Modul-Ouest</title>
-		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/header.php" ); ?>
+		<?php include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/header.php" ); ?>
 	</head>
 	<body class="page">
 	
-		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/top.php" ); ?>
+		<?php include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/top.php" ); ?>
 		
 		<div class="row contenu">
 			
-			<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/rappel.php" ); ?>
+			<?php include( $_SERVER[ "DOCUMENT_ROOT" ] . "/rappel.php" ); ?>
 			
 			<div class="large-12 columns">
 				
@@ -99,12 +99,12 @@
 				
 			</div>
 			
-			<div id="div_success" class="large-12 medium-12 small-12 columns <?=$affichage_success?>">
+			<div id="div_success" class="large-12 medium-12 small-12 columns <?php echo $affichage_success?>">
 				<h3>Félicitations!</h3>
 				<p>Votre message a été envoyé avec succès!</p>
 			</div>
 			
-			<div id="div_erreur" class="large-12 medium-12 small-12 columns <?=$affichage_erreur?>">
+			<div id="div_erreur" class="large-12 medium-12 small-12 columns <?php echo $affichage_erreur?>">
 				<h3>Erreur!</h3>
 				<p>
 					Une erreur s'est produite lors de l'envoi de votre message.<br>
@@ -167,8 +167,8 @@
 			
 		</div>
 		
-		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/footer.php" ); ?>
-		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/scripts.php" ); ?>
+		<?php include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/footer.php" ); ?>
+		<?php include( $_SERVER[ "DOCUMENT_ROOT" ] . "/scripts.php" ); ?>
 		
 		<script>
 			$(document).ready(function(){

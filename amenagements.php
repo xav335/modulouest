@@ -1,4 +1,4 @@
-<?
+<?php
 	include_once ( $_SERVER[ "DOCUMENT_ROOT" ] . "/admin/classes/utils.php" );
 	require( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/inc.config.php" );
 	require $_SERVER[ "DOCUMENT_ROOT" ] . "/admin/classes/Categorie.php";
@@ -24,22 +24,22 @@
 <html class="no-js" lang="fr">
 	<head>
 		<title>Les différents aménagements de Modul-Ouest</title>
-		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/header.php" ); ?>
+		<?php include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/header.php" ); ?>
 	</head>
 	
 	<body class="page">
 
-		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/top.php" ); ?>
+		<?php include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/top.php" ); ?>
 		
 		<div class="row contenu">
 			
-			<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/rappel.php" ); ?>
+			<?php include( $_SERVER[ "DOCUMENT_ROOT" ] . "/rappel.php" ); ?>
 	
 			<div class="large-12 columns">
 				<h1>Les aménagements modul-ouest</h1>
 			</div>
 			
-			<?
+			<?php
 			// ---- Affichage des onglets ---------------------------------------- //
 			if ( !empty( $liste_categorie ) ) {
 				$i = 0;
@@ -168,8 +168,8 @@
 			
 		</div>
 		
-		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/footer.php" ); ?>
-		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/scripts.php" ); ?>
+		<?php include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/footer.php" ); ?>
+		<?php include( $_SERVER[ "DOCUMENT_ROOT" ] . "/scripts.php" ); ?>
 		
 		<script>
 			$(document).ready(function(){

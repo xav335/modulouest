@@ -1,4 +1,4 @@
-<?
+<?php
 
 	// ---- D�finition des constantes du site ------------------------ //
 	//echo $_SERVER[ "DOCUMENT_ROOT" ] . "<br>";

@@ -47,7 +47,7 @@
 				});
 			}
 			
-			google.maps.event.addDomListener(window, 'load', initialize);
+			//google.maps.event.addDomListener(window, 'load', initialize);
 			
 			function checkResize(){
 			
@@ -56,7 +56,7 @@
 				map.setCenter(center);
 			}
 			
-			window.onresize = checkResize;
+			//window.onresize = checkResize;
 		}
 		// ---------------------------------------------------------- //
 		
@@ -73,7 +73,7 @@
 	        loop:true
 	    });
 	    
-	    <?
+	    <?php
 	    // ---- Suffisamment de block pour lancer le slider ----- //
 	    if ( count( $liste_produit ) >= 3 ) {
 	    	?>
@@ -83,7 +83,7 @@
 		        speed: 1000,
 		        loop:true
 		    });
-			<?
+			<?php
 		}
 	    // ------------------------------------------------------ //
 	    ?>

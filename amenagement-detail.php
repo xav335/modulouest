@@ -1,4 +1,4 @@
-<?
+<?php
 	include_once ( $_SERVER[ "DOCUMENT_ROOT" ] . "/admin/classes/utils.php" );
 	require( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/inc.config.php" );
 	require $_SERVER[ "DOCUMENT_ROOT" ] . "/admin/classes/Categorie.php";
@@ -52,19 +52,19 @@
 <html class="no-js" lang="fr">
 	<head>
 		<title>Les différents aménagements de Modul-Ouest</title>
-		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/header.php" ); ?>
+		<?php include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/header.php" ); ?>
 	</head>
 	
 	<body>
 		
-		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/top.php" ); ?>
+		<?php include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/top.php" ); ?>
 	
 		<div class="row contenu">
 			
-			<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/rappel.php" ); ?>
+			<?php include( $_SERVER[ "DOCUMENT_ROOT" ] . "/rappel.php" ); ?>
 	
 			<div class="large-12 columns">
-				<h1><?php echo $nom?></h1>
+				<h1><?phpphp echo $nom?></h1>
 			</div>
 			
 			<div class="row">
@@ -73,7 +73,7 @@
 					<div class="gallery-top">
 						<div class="swiper-wrapper">
 							
-							<?
+							<?php
 							// ---- Affichage des vignettes ------------------ //
 							if ( !empty( $liste_image ) ) {
 								foreach ( $liste_image as $_image ) { 
@@ -92,7 +92,7 @@
 					<div class="gallery-thumbs">
 						<div class="swiper-wrapper">
 							
-							<?
+							<?php
 							// ---- Affichage des vignettes ------------------ //
 							if ( !empty( $liste_image ) ) {
 								foreach ( $liste_image as $_image ) { 
@@ -108,9 +108,9 @@
 				
 				<div class="large-6 columns">
 					<h3>Descriptif</h3>
-					<p><?=$description?></p>
+					<p><?php=$description?></p>
 					
-					<?
+					<?php
 					// ---- PDF disponible --------------- //
 					if ( $fichier_pdf != '' ) {
 						echo "<h3>PDF disponible</h3>\n";
@@ -127,8 +127,8 @@
 			
 		</div>
 	
-		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/footer.php" ); ?>
-		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/scripts.php" ); ?>
+		<?php include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/footer.php" ); ?>
+		<?php include( $_SERVER[ "DOCUMENT_ROOT" ] . "/scripts.php" ); ?>
 		
 		<script>
 			$(document).ready(function(){

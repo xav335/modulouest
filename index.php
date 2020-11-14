@@ -1,4 +1,4 @@
-<?
+<?php
 	include_once ( $_SERVER[ "DOCUMENT_ROOT" ] . "/admin/classes/utils.php" );
 	require $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/inc.config.php";
 	require $_SERVER[ "DOCUMENT_ROOT" ] . "/admin/classes/News.php";
@@ -95,18 +95,18 @@
 <html class="no-js" lang="fr">
 	<head>
 		<title>Modul-Ouest - aménagement, transformation de véhicules utilitaires</title>
-		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/header.php" ); ?>
+		<?php include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/header.php" ); ?>
 	</head>
 <body>
 
-	<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/top.php" ); ?>
-	<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/slider.php" ); ?>
+	<?php include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/top.php" ); ?>
+	<?php include( $_SERVER[ "DOCUMENT_ROOT" ] . "/slider.php" ); ?>
 	
 	<div class="row contenu">
 		
-		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/rappel.php" ); ?>
+		<?php include( $_SERVER[ "DOCUMENT_ROOT" ] . "/rappel.php" ); ?>
 
-		<div class="<?=$classe_texte?>">
+		<div class="<?php=$classe_texte?>">
 			
 			<h1>Présentation de modul-ouest</h1>
 			<h3>Equipez votre véhicule, Pensez MODUL OUEST <br>
@@ -124,7 +124,7 @@
 
 		</div>
 		
-		<?
+		<?php
 		// ---- Affichage des actualités ------ //
 		if ( $contenu_actualite != '' ) {
 			echo $contenu_actualite;
@@ -133,13 +133,13 @@
 		
 	</div>
 	
-	<?
+	<?php
 	// ---- Affichage des produits "à la Une" ------ //
 	echo $contenu_produit;
 	?>
 	
-	<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/footer.php" ); ?>
-	<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/scripts.php" ); ?>
+	<?php include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/footer.php" ); ?>
+	<?php include( $_SERVER[ "DOCUMENT_ROOT" ] . "/scripts.php" ); ?>
 	
 	<script>
 		$(document).ready(function() {

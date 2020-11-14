@@ -2,15 +2,15 @@
 <html class="no-js" lang="fr">
 	<head>
 		<title>Présentation de Modul-Ouest</title>
-		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/header.php" ); ?>
+		<?php include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/header.php" ); ?>
 	</head>
 <body class="page">
 
-	<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/top.php" ); ?>
+	<?php include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/top.php" ); ?>
 	
 	<div class="row contenu">
 		
-		<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/rappel.php" ); ?>
+		<?php include( $_SERVER[ "DOCUMENT_ROOT" ] . "/rappel.php" ); ?>
 
 		<div class="large-12 columns">
 			
@@ -73,8 +73,8 @@
 		  
 	</div>
 	
-	<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/footer.php" ); ?>
-	<? include( $_SERVER[ "DOCUMENT_ROOT" ] . "/scripts.php" ); ?>
+	<?php include( $_SERVER[ "DOCUMENT_ROOT" ] . "/inc/footer.php" ); ?>
+	<?php include( $_SERVER[ "DOCUMENT_ROOT" ] . "/scripts.php" ); ?>
 	
 	<script>
 		$(document).ready(function(){
