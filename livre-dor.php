@@ -8,8 +8,8 @@
 	$goldbook = new Goldbook();
 	$contact = new Contact();
 	
-	$mon_action = $_POST[ "mon_action" ];
-	$anti_spam = $_POST[ "as" ];
+	$mon_action = (isset($_POST["mon_action"])) ? $_POST["mon_action"] : "";
+	$anti_spam = (isset($_POST["as"])) ? $_POST["as"] : "";
 	//print_pre( $_POST );
 	
 	// ---- Post du commentaire ---------------------------- //
@@ -52,11 +52,9 @@
 			//echo "Entete :<br>" . $entete . "<br><br>";
 			
 			$sujet = utf8_decode( "Nouveau commentaire" );
-			
-			//$_to = "franck_langleron@hotmail.com";
-			$_to = ( MAIL_TEST != '' )
-		    	? MAIL_TEST
-		    	: MAIL_CONTACT;
+
+            //$_to = "xav335@hotmail.com";
+            $_to = ( MAIL_TEST != '' ) ? MAIL_TEST : MAIL_CONTACT;
 			//echo "Envoi du message à : " . $_to . "<br><br>";
 			
 			$message = "Bonjour,<br><br>";

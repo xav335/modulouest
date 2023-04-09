@@ -133,7 +133,7 @@ class Produit extends StorageManager {
 			//$data = $this->load( $id, $debug );
 			//print_pre( $data );
 			
-			// ---- Suppression de la catégorie ---- //
+			// ---- Suppression de la catï¿½gorie ---- //
 			$sql = "DELETE FROM `product`";
 			$sql .= " WHERE `id`=" . $id . ";";
 			
@@ -200,8 +200,8 @@ class Produit extends StorageManager {
 	
 	public function getListe( $tab=array(), $debug=false ) {
 		$this->dbConnect();
-		
-		$champ_souhaite = ( $tab[ "champ" ] != '' ) ? $tab[ "champ" ] : "*";
+		$champ_souhaite = (isset($_POST["champ"])) ? $_POST["champ"] : "*";
+		//$champ_souhaite = ( $tab[ "champ" ] != '' ) ? $tab[ "champ" ] : "*";
 		$requete = "SELECT " . $champ_souhaite . " FROM `product`";
 		
 		if ( $tab[ "where" ] == '' ) {
@@ -214,8 +214,10 @@ class Produit extends StorageManager {
 				}
 			}
 			
-			$order_by = ( $tab[ "order_by" ] != "" ) ? $tab[ "order_by" ] : "nom";
-			$sens = ( $tab[ "sens" ] != "" ) ? $tab[ "sens" ] : "ASC";
+			//$order_by = ( $tab[ "order_by" ] != "" ) ? $tab[ "order_by" ] : "nom";
+			$order_by = (isset($_POST["$order_by"])) ? $_POST["$order_by"] : "nom";
+			//$sens = ( $tab[ "sens" ] != "" ) ? $tab[ "sens" ] : "ASC";
+			$sens = (isset($_POST["sens"])) ? $_POST["sens"] : "ASC";
 			$requete .= " ORDER BY " . $order_by . " " . $sens;
 		}
 		else $requete .= $tab[ "where" ];
@@ -234,12 +236,12 @@ class Produit extends StorageManager {
 		if ( $debug ) echo "--- id_categorie : " . $id_categorie . "<br>";
 		if ( $debug ) echo "--- id_produit : " . $id_produit . "<br>";
 		
-		// ---- On recherche le 1ier produit à afficher ------- //
+		// ---- On recherche le 1ier produit ï¿½ afficher ------- //
 		if ( $id_produit == '' ) {
 			$categorie = new Categorie();
 			$produit_charge = false;
 			
-			// ---- Liste des catégories enfants ---------- //
+			// ---- Liste des catï¿½gories enfants ---------- //
 			if ( 1 == 1 ) {
 				unset( $recherche );
 				$recherche[ "id_parent" ] = $id_categorie;
@@ -251,7 +253,7 @@ class Produit extends StorageManager {
 			if ( !empty( $liste_categorie ) ) {
 				foreach( $liste_categorie as $_categorie ) {
 					
-					// ---- Recherche des produits associés à cette sous catégorie ---- //
+					// ---- Recherche des produits associï¿½s ï¿½ cette sous catï¿½gorie ---- //
 					unset( $recherche );
 					$recherche[ "id_categorie" ] = $_categorie[ "id" ];
 					$recherche[ "online" ] = '1';
@@ -271,7 +273,7 @@ class Produit extends StorageManager {
 		}
 		// ---------------------------------------------------- //
 		
-		// ---- Produit renseigné --> On le charge ------------ //
+		// ---- Produit renseignï¿½ --> On le charge ------------ //
 		$data = $this->load( intval( $id_produit ), $debug );
 		// ---------------------------------------------------- //
 		

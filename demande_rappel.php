@@ -22,11 +22,9 @@
 			//echo "Entete :<br>" . $entete . "<br><br>";
 			
 			$sujet = utf8_decode( "Demande de rappel" );
-			
-			//$_to = "franck_langleron@hotmail.com";
-			$_to = ( MAIL_TEST != '' )
-		    	? MAIL_TEST
-		    	: MAIL_CONTACT;
+
+            //$_to = "xav335@hotmail.com";
+            $_to = ( MAIL_TEST != '' ) ? MAIL_TEST : MAIL_CONTACT;
 			//echo "Envoi du message à : " . $_to . "<br><br>";
 			
 			$message = "Bonjour,<br><br>";

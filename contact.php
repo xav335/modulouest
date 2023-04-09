@@ -42,7 +42,7 @@
 		
 		// ---- Envoi du mail à l'admin -------------- //
 		if ( 1 == 1 ) {
-			$entete = "From:" . $_POST[ "nom" ] . " <" .  $_POST[ "email" ] . ">\n";
+            $entete = "From:" . MAILNAMECUSTOMER . " <" . MAILCUSTOMER . ">\n";
 			$entete .= "MIME-version: 1.0\n";
 			$entete .= "Content-type: text/html; charset= iso-8859-1\n";
 			$entete .= "Bcc:" . MAIL_BCC . "\n";
@@ -50,10 +50,8 @@
 			
 			$sujet = utf8_decode( "Prise de contact" );
 			
-			//$_to = "franck_langleron@hotmail.com";
-			$_to = ( MAIL_TEST != '' )
-		    	? MAIL_TEST
-		    	: MAIL_CONTACT;
+			//$_to = "xav335@hotmail.com";
+			$_to = ( MAIL_TEST != '' ) ? MAIL_TEST : MAIL_CONTACT;
 			//echo "Envoi du message à : " . $_to . "<br><br>";
 			
 			$message = "Bonjour,<br><br>";
@@ -64,9 +62,9 @@
 			$message .= "Message : <br><i>" . nl2br( $_POST[ "message" ] ) . "</i><br><br>";
 			$message .= "Cordialement.";
 			$message = utf8_decode( $message );
-			if ( $debug ) echo $message;
+			// echo $message;
 			
-			if ( !$debug ) $retour = mail( $_to, $sujet, stripslashes( $message ), $entete );
+            $retour = mail( $_to, $sujet, stripslashes( $message ), $entete );
 			//exit();
 			
 			$affichage_success = ( $retour ) ? "" : "wait";
