@@ -112,6 +112,7 @@ p {font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:18px;text-a
 .footer button:hover {background:#333;}
 
 .facebook, .dailymotion {width:45px;height:45px;display:block;float:left;background:url('/img/facebook.png') top center no-repeat;}
+
 .dailymotion {background-image:url('/img/dailymotion.png');margin-left:5px;}
 .facebook:hover, .dailymotion:hover {background-position:bottom center;}
 

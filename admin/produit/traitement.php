@@ -5,9 +5,8 @@
 	require '../classes/Produit.php';
 	require '../classes/Produit_image.php';
 	session_start();
-	
-	$debug = false;
-	if ( $debug ) print_pre( $_POST );
+
+	// print_pre( $_POST );
 	
 	$produit = new Produit();
 	$produit_image = new Produit_image();
@@ -58,7 +57,7 @@
 			
 			// ---- Gestion des images du produit -------------------------------- //
 			if ( !empty( $_POST[ "mes_images" ] ) ) {
-				print_pre( $_POST[ "mes_images" ] ); exit();
+				//print_pre( $_POST[ "mes_images" ] ); exit();
 				
 				$cpt = 1;
 				foreach( $_POST[ "mes_images" ] as $_image ) {
@@ -74,17 +73,17 @@
 						// ---- Image de taille "normale" ---- //
 						$destination = $_SERVER['DOCUMENT_ROOT'] . '/photos/produit/normale' . $filenameDest;
 						if ( $debug ) echo "--- destination : " . $destination . "<br>";
-						$imageManager->imageResize( $source, $destination, 800, 600, null );
+						$imageManager->imageResize( $source, $destination, 800, 600, ZEBRA_IMAGE_NOT_BOXED );
 						
 						// ---- Image de taille "grande" ----- //
 						$destination = $_SERVER['DOCUMENT_ROOT'] . '/photos/produit/accueil' . $filenameDest;
 						if ( $debug ) echo "--- destination : " . $destination . "<br>";
-						$imageManager->imageResize( $source, $destination, 319, 327, ZEBRA_IMAGE_CROP_CENTER );
+						$imageManager->imageResize( $source, $destination, 319, 327, ZEBRA_IMAGE_NOT_BOXED );
 						
 						// ---- Image de taille "vignette" --- //
 						$destination = $_SERVER['DOCUMENT_ROOT'] . '/photos/produit/vignette' . $filenameDest;
 						if ( $debug ) echo "--- destination : " . $destination . "<br>";
-						$imageManager->imageResize( $source, $destination, 97, 99, ZEBRA_IMAGE_CROP_CENTER );
+						$imageManager->imageResize( $source, $destination, 97, 99, ZEBRA_IMAGE_NOT_BOXED );
 					}
 					// ------------------------------------------------- //
 					

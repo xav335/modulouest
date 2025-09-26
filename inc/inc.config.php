@@ -4,14 +4,6 @@
 	//echo $_SERVER[ "DOCUMENT_ROOT" ] . "<br>";
 	switch( $_SERVER[ "DOCUMENT_ROOT" ] ) {
 		
-		// ---- Serveur local Franck -------- //
-		case "/var/www/modulouest" :
-			$localhost = "localhost";
-			$dbname = "modulouest";
-			$user = "global";
-			$mdp = "global";
-			break;
-		
 		// ---- Serveur PRE-PROD ------------ //
 		case "/home/web/modulouest" :
 			$localhost = "localhost";
@@ -43,7 +35,7 @@
 	define( "MAILCUSTOMER", 	"contact@modul-ouest.com" );
 	define( "MAILNAMECUSTOMER", "Modul Ouest" );
 	define( "URLSITEDEFAULT", 	"http://www.modul-ouest.com/" );
-	define( "FACEBOOK_LINK", 	"https://www.facebook.com/modul.ouest" );
+	define( "FACEBOOK_LINK", 	"https://www.facebook.com/p/Modul-Ouest-100057679171834/?locale=fr_FR" );
 	define( "DAILYMOTION_LINK", "http://www.dailymotion.com/video/x43ijxj" );
 	
 	// ---- Mail d'envoi

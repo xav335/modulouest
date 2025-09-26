@@ -1,7 +1,13 @@
 	<div class="row fullwidth center top-of-page">
-		<div class="large-12 columns top">
+        <div class="large-3 columns top">
+           &nbsp;
+        </div>
+		<div class="large-6 columns top">
 			<img src="img/nvlogo.png" alt="Modul-Ouest" />
 		</div>
+        <div class="large-3 columns top">
+            <img src="img/utac.jpg" width="200" alt="Modul-Ouest" />
+        </div>
 	</div>
 	<div class="row fullwidth menu">
 		<div class="large-12 columns">

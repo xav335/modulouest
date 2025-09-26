@@ -14,51 +14,11 @@
 	<script type="text/javascript" src="js/vendor/fancybox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
 	<!-- End Fancybox -->
 	
-	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
 	
 	<script>
 		
-		// ---- Zone Google Map ------------------------------------- //
-		if ( 1 == 1 ) {
-			var map;
-			function initialize() {
-			
-				var mapOptions = {
-					mapTypeId: google.maps.MapTypeId.ROADMAP,
-					mapTypeControl: false,
-					zoom: 11,
-					zoomControl: false,
-					panControl: false,
-					streetViewControl: false,
-					scrollwheel: false,
-					scaleControl: false,
-					overviewMapControl: false,
-					center: new google.maps.LatLng(44.881667, -0.46348699999998644)
-				};
-				
-				map = new google.maps.Map(document.getElementById('map-canvas'),
-					mapOptions);
-				
-				var marker = new google.maps.Marker({
-					position: new google.maps.LatLng(44.881667, -0.46348699999998644),
-					map: map,
-					icon: 'img/marker.png',
-					title: 'Modul-Ouest'
-				});
-			}
-			
-			google.maps.event.addDomListener(window, 'load', initialize);
-			
-			function checkResize(){
-			
-				var center = map.getCenter();
-				google.maps.event.trigger(map, 'resize');
-				map.setCenter(center);
-			}
-			
-			window.onresize = checkResize;
-		}
-		// ---------------------------------------------------------- //
+
 		
 		$(document).foundation();
 		
@@ -73,9 +33,12 @@
 	        loop:true
 	    });
 	    
-	    <?
+	    <?php
 	    // ---- Suffisamment de block pour lancer le slider ----- //
-	    if ( count( $liste_produit ) >= 3 ) {
+        if (empty($liste_produit)) {
+            $liste_produit = [];
+        }
+        if ( count( $liste_produit ) >= 3 ) {
 	    	?>
 			var swiperamenagements = new Swiper('.amenagements', {
 		        slidesPerView: 3,
@@ -153,12 +116,4 @@
 		});
 		
 	</script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-P6MF27Z4Z9"></script>
-	    <script>
-	      window.dataLayer = window.dataLayer || [];
-	      function gtag(){dataLayer.push(arguments);}
-	        gtag('js', new Date());
 
-	        gtag('config', 'G-P6MF27Z4Z9');
-		</script>

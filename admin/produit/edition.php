@@ -147,7 +147,7 @@
 							<label for="titre">Choix des photos </label><br>
 							<input type="hidden" name="url0" id="url0" value=""><br>
 							<input type="hidden"  name="idImage"  id="idImage" value="">
-	            			<a href="javascript:openCustomRoxy('0')"><img id="" src="http://www.placehold.it/400x150/EFEFEF/171717&text=Choisir les images ici" id="customRoxyImage0" style="max-width:400px;"></a>
+	            			<a href="javascript:openCustomRoxy('0')"><img id="" src="../img/marker.png" id="customRoxyImage0" style="max-width:400px;"></a>
 						</div>
 						
 						<div class="col-md-6" style="margin-bottom:20px;">
@@ -162,7 +162,7 @@
 						  		<input type="button" value="Annuler" onclick="javascript:annuler_pdf();" />
 							</div>
 							<div id="div_pdf_img" style="display:<?=$display_pdf_img?>;">
-	            				<a href="javascript:openCustomRoxy('1')"><img id="img_pdf" src="http://www.placehold.it/400x150/EFEFEF/171717&text=Choisir le PDF ici" id="customRoxyImage1" style="max-width:400px;"></a>
+	            				<a href="javascript:openCustomRoxy('1')"><img id="img_pdf" src="../img/pdf.png" id="customRoxyImage1" style="max-width:400px;"></a>
 	            			</div>
 						</div>
 						<div style="clear:both;"></div>

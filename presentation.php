@@ -62,7 +62,7 @@
 		
 		  	
 			
-			<a href="http://www.systemedstrom.com/" target="_blank"><img alt="" src="img/systemedstrom.png" width="120"></a>
+			<a href="https://www.systemedstrom.com/fr/" target="_blank"><img alt="" src="img/systemedstrom.png" width="120"></a>
 			<img alt="" src="img/durisotti.jpg" width="220">
 			<img alt="" src="img/sirac.png" width="80">
 			<img alt="" src="img/rsm.png" width="120">

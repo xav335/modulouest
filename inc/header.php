@@ -7,3 +7,6 @@
 		<link rel="stylesheet" href="/css/swiper.css">
 		<link rel="stylesheet" href="/css/style.css" />
 		<script src="js/vendor/modernizr.js"></script>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-88LM9T3XKP"></script>
+        <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-88LM9T3XKP'); </script>
