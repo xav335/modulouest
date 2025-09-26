@@ -112,7 +112,7 @@
 			
 			<div class="large-4 medium-6 small-12 columns">
 				<h3>MODUL-OUEST</h3>
-				<p>SARL 40141433900036</p>
+				<p>SAS 40141433900036</p>
 				<p>
 					Za Tabernotte Sud<br/>
 					33370 YVRAC
